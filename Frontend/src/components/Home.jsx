@@ -1,5 +1,4 @@
 import Navbar from "./Navber";
-
 function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-[#2C2C2C]">
@@ -55,7 +54,6 @@ function Home() {
       </div>
 
       {/* Footer */}
- 
     </div>
   );
 }

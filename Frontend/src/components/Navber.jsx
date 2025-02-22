@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import FireLogo from "../../public/FireLogo.jpg"; // Ensure correct path
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -46,18 +47,16 @@ function Navbar() {
 
           {/* Logo - Centered in Mobile, Left-Aligned in Larger Screens */}
           <div className="flex w-full justify-center sm:w-auto sm:justify-start ">
-            <img className="h-14 sm:h-12 md:h-14 w-14 border rounded-full border-white hover:cursor-pointer" src={FireLogo} alt="Fire Logo" />
+        <Link to="/"><img className="h-14 sm:h-12 md:h-14 w-14 border rounded-full border-white hover:cursor-pointer" src={FireLogo} alt="Fire Logo" /></Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden sm:flex flex-1 items-center justify-start">
             <div className="ml-6">
               <div className="flex space-x-4">
-                {["Home", "Training Hub", "Contact Us"].map((item) => (
-                  <a key={item} href="#" className="text-gray-300  hover:text-[#F5ECD5] px-3 py-2 rounded-md text-sm font-medium">
-                    {item}
-                  </a>
-                ))}
+                <Link to="/home" className="text-gray-300 hover:text-[#F5ECD5] px-3 py-2 rounded-md text-sm font-medium">Home</Link>
+                <Link to="/aboutus" className="text-gray-300 hover:text-[#F5ECD5] px-3 py-2 rounded-md text-sm font-medium">About Us</Link>
+                <Link to="/contactus" className="text-gray-300 hover:text-[#F5ECD5] px-3 py-2 rounded-md text-sm font-medium">Contact Us</Link>
               </div>
             </div>
           </div>
@@ -101,11 +100,9 @@ function Navbar() {
       {mobileMenuOpen && (
         <div className="sm:hidden" id="mobile-menu">
           <div className="space-y-1 px-2 pt-2 pb-3">
-            {["Home", "Training Hub", "Contact Us"].map((item) => (
-              <a key={item} href="#" className="block rounded-md bg-gray px-3 py-2 text-base font-medium text-white">
-                {item}
-              </a>
-            ))}
+            <Link to="/home" className="block rounded-md bg-gray px-3 py-2 text-base font-medium text-white">Home</Link>
+            <Link to="/aboutus" className="block rounded-md bg-gray px-3 py-2 text-base font-medium text-white">About Us</Link>
+            <Link to="/contactus" className="block rounded-md bg-gray px-3 py-2 text-base font-medium text-white">Contact Us</Link>
           </div>
         </div>
       )}
