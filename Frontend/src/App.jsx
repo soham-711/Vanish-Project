@@ -5,8 +5,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import TrainingHub from "./components/TrainingHub/TrainingHub";
 
-import AboutUs from "./components/aboutus/AboutUs";
-
 import Contact_us from "./components/Contact/Contact_us";
 import User from "./components/UserProfile/User";
 import TrainingHubForStaff from "./components/TrainingHubForStaff/TrainingHubForStaff";
@@ -19,10 +17,9 @@ function App() {
       <Route path="/user-login" element={<UserLogin />} />
       <Route path="/user-signup" element={<UserSignup />} />
       <Route path="/training-hub" element={<TrainingHub />} />
-      <Route path="/aboutus" element={<AboutUs />} />
-      <Route path="/contactus" element={<Contact_us />} />
-      <Route path="/user" element={<User />} />
-      <Route path="/training-hub-for-staff" element={<TrainingHubForStaff/>} />
+      <Route path="/Contact-us" element={<Contact_us />} />
+      <Route path="/User" element={<User/>}/>
+      <Route path="/traininghub-for-staff" element={<TrainingHubForStaff/>}/>
     </Routes>
   );
 }
