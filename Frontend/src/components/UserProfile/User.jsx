@@ -2,7 +2,6 @@ import { FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io";
-import ParticleBackground from "./empty"; // Import the particle background
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -48,8 +47,6 @@ const User = () => {
 
   return (
     <div className="relative flex flex-col md:flex-row gap-10  min-h-screen w-full text-white p-4">
-      {/* Particle Background */}
-      <ParticleBackground />
       <ToastContainer position="top-right" autoClose={3000} />
       {/* Left Sidebar */}
       <div

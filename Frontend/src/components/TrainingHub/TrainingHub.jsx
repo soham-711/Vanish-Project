@@ -1,5 +1,6 @@
 import Navbar from "../Navber";
 import Footer from "../Footer";
+import { Link } from "react-router-dom";
 
 const TrainingHub = () => {
   return (
@@ -47,6 +48,7 @@ const TrainingHub = () => {
               Engage in an immersive fire safety simulation where quick thinking
               and teamwork can save lives!
             </p>
+            <Link to="/game" className="mt-4 text-yellow-400 hover:underline">Play Now</Link>
           </div>
 
           {/* Training Hub Section */}
@@ -63,6 +65,7 @@ const TrainingHub = () => {
               Professional fire safety training designed for staff to prevent
               and handle emergencies efficiently.
             </p>
+            <Link to="/traininghub-for-staff" className="mt-4 text-yellow-400 hover:underline">Learn More</Link>
           </div>
         </div>
       </div>
