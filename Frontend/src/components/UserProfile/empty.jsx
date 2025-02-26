@@ -1,43 +1,53 @@
-import React from "react";
-import { loadFull } from "tsparticles";
-import Particles from "react-tsparticles";
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
 
 const ParticleBackground = () => {
-  const particlesInit = async (engine) => {
-    await loadFull(engine);
-  };
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      console.log("Particles Engine Initialized", engine);
+      await loadSlim(engine);
+      setInit(true);
+    }).catch((error) => console.error("Particle Engine Error:", error));
+  }, []);
 
   return (
-    <div className="relative w-full h-screen bg-gradient-to-l from-[#b2ef3c] via-[#c8e976] to-[#fba85f]">
-    <Particles
-      id="tsparticles"
-      init={particlesInit}
-      options={{
-        background: { color: "transparent" },
-        particles: {
-          number: { value: 80, density: { enable: true, area: 800 } },
-          color: { value: "#ffffff" },
-          shape: { type: "circle" },
-          opacity: { value: 0.8, random: true },
-          size: { value: 4, random: true },
-          move: { enable: true, speed: 1, direction: "none", outMode: "bounce" },
-          line_linked: { enable: false }, // Disable default links
-          links: {
-            enable: true, // Enable molecular structure effect
-            distance: 120,
-            color: "#ffffff",
-            opacity: 0.4,
-            width: 2,
-          },
-        },
-      }}
-      className="absolute inset-0"
-    />
-    <div className="relative flex items-center justify-center h-full text-white text-2xl font-bold">
-      Chemical Bond Animation 🧪✨
+    <div className="absolute inset-0 w-full h-full z-[-1]">
+      {init && (
+        <Particles
+          id="tsparticles"
+          options={{
+            background: { color: "transparent" },
+            fpsLimit: 60,
+            particles: {
+              number: { value: 100, density: { enable: true, area: 800 } },
+              color: { value: "#000000" }, // White particles (dots)"#ffffff"
+              shape: { type: "circle" },
+              opacity: { value: 0.9, random: true },
+              size: { value: 2, random: true },
+              move: { enable: true, speed: 2, direction: "none", outModes: "bounce" },
+              links: {
+                enable: true,
+                distance: 120,
+                color: "#ffffff", // Black lines,
+                opacity: 0.8,
+                width: 1.5,
+              },
+            },
+            interactivity: {
+              events: {
+                onHover: { enable: true, mode: "grab" },
+                onClick: { enable: true, mode: "push" },
+              },
+            },
+          }}
+          className="absolute inset-0"
+        />
+      )}
     </div>
-  </div>
-);
+  );
 };
 
 export default ParticleBackground;
