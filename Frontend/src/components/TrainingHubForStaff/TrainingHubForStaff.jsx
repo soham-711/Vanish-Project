@@ -1,29 +1,28 @@
 function TrainingHubForStaff() {
   const videos = {
     basic: [
-      "https://youtu.be/cnn-yvszLXE",
-      "https://www.example.com/emergency_evacuation.mp4",
-      "https://www.example.com/fire_prevention.mp4",
-      "https://www.example.com/workplace_safety.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
     ],
     advanced: [
-      "https://www.example.com/electrical_fires.mp4",
-      "https://www.example.com/gas_leak_prevention.mp4",
-      "https://www.example.com/high_risk_areas.mp4",
-      "https://www.example.com/residential_safety.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
     ],
     organizations: [
-      "https://www.example.com/office_drills.mp4",
-      "https://www.example.com/factory_safety.mp4",
-      "https://www.example.com/public_spaces.mp4",
-      "https://www.example.com/school_safety.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
     ],
     vehicles: [
-      "https://www.example.com/car_safety.mp4",
-      "https://www.example.com/bus_truck_safety.mp4",
-      "https://www.w3schools.com/html/mov_bbb.mp4",
-      "https://www.example.com/emergency_response.mp4",
-      "https://www.w3schools.com/html/mov_bbb.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
+      "/Electrical.mp4",
     ],
   };
 

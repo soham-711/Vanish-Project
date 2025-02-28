@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
@@ -8,29 +7,36 @@ const developers = [
     name: "Soham Biswas",
     role: "FullStack",
     image: "./images1.jpg",
-    linkedin: "http://linkedin.com/in/sohambiswas",
-    email: "Vanish_saikat@gmail.com",
+    linkedin: "https://www.linkedin.com/in/soham-biswas-748300293/",
+    email: "sohambiswas711@gmail.com",
+  },
+  {
+    name: "Saikat Sinchan Ghosh",
+    role: "FullStack",
+    image: "./images5.png",
+    linkedin: "https://www.linkedin.com/in/saikat-sinchan-ghosh-70aa192a6/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "sinchang646@gmail.com",
   },
   {
     name: "Sagnik Dutta",
     role: "Hardware",
     image: "./images2.jpg",
-    linkedin: "http://linkedin.com/in/anishmaji",
-    email: "Vanish_saikat@gmail.com",
+    linkedin: "https://www.linkedin.com/in/sagnik-dutta-367717261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "skvanish509@gmail.com",
   },
   {
     name: "Dhrupad Pal",
     role: "Developer",
     image: "./images3.jpg",
-    linkedin: "http://linkedin.com/in/rahulsen",
-    email: "Vanish_saikat@gmail.com",
+    linkedin: "https://www.linkedin.com/in/dhrupad-paul-668b482a9/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "dhrupadpaul04@gmail.com",
   },
   {
     name: "Ananya Priya",
     role: "UI/UX Designer",
     image: "./images4.png",
-    linkedin: "http://linkedin.com/in/sinchanghosh",
-    email: "Vanish_saikat@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ananya-priya-3aa550284/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    email: "ananyapriya0904@gmail.com",
   },
 ];
 
@@ -41,24 +47,21 @@ const Developers = () => {
       style={{
         backgroundImage:
           "linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12)",
-          
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Page Header */}
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="text-center mb-12"
       >
         <h1 className="text-4xl font-bold text-white">Meet Our Developers 🚀</h1>
         <p className="text-gray-200 text-lg mt-2">
           A team of passionate developers, designers, and engineers.
         </p>
-
-        {/* Gradient Divider */}
         <div
           className="w-full h-[4px] mt-4"
           style={{
@@ -69,30 +72,29 @@ const Developers = () => {
       </motion.div>
 
       {/* Developer Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
         {developers.map((dev, index) => (
           <motion.div
-  key={index}
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{
-    duration: 0.5,
-    delay: index * 0.2,
-    ease: "easeInOut",
-  }}
-  whileHover={{
-    scale: 1.1,
-    transition: { duration: 0.3, ease: "easeInOut" },
-  }}
-  className="shadow-lg rounded-xl p-6 text-center border hover:shadow-2xl transition-all duration-300"
-  style={{
-    backgroundImage:
-"   linear-gradient(to left bottom, #52fc25, #34fe68, #22fe93, #35fdb5, #5afbcf, #65f8e6, #80f4f4, #9feffa, #b6e9fd, #cce3f6, #dadeea, #dddddd)",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-
+            key={index}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.3,
+              delay: index * 0.1,
+              ease: "easeOut",
+            }}
+            whileHover={{
+              scale: 1.08,
+              transition: { duration: 0.2, ease: "easeInOut" },
+            }}
+            className="shadow-lg rounded-xl p-6 text-center border hover:shadow-2xl transition-all duration-300"
+            style={{
+              backgroundImage:
+                "linear-gradient(to left bottom, #52fc25, #34fe68, #22fe93, #35fdb5, #5afbcf, #65f8e6, #80f4f4, #9feffa, #b6e9fd, #cce3f6, #dadeea, #dddddd)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
             <img
               src={dev.image}
               alt={dev.name}
@@ -107,13 +109,13 @@ const Developers = () => {
               <Link
                 to={dev.linkedin}
                 target="_blank"
-                className="text-blue-600 hover:text-blue-800 transition duration-300 flex items-center gap-2"
+                className="text-blue-600 hover:text-blue-800 transition duration-200 flex items-center gap-2"
               >
                 <FaLinkedin size={20} /> LinkedIn
               </Link>
               <a
                 href={`mailto:${dev.email}`}
-                className="text-red-500 hover:text-red-700 transition duration-300 flex items-center gap-2"
+                className="text-red-500 hover:text-red-700 transition duration-200 flex items-center gap-2"
               >
                 <FaEnvelope size={20} /> Email
               </a>

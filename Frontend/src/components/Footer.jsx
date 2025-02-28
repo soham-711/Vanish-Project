@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Footer() {
     return (
       <footer className="bg-gradient-to-r from-[#ff4500] via-[#ad1600] to-[#8b0000] text-white py-6 px-4 z-10">
@@ -6,12 +8,12 @@ function Footer() {
           aria-label="Footer Navigation"
           className="flex flex-wrap justify-center gap-4 md:gap-6 mb-4"
         >
-          <a href="#" className="hover:text-gray-300">About</a>
-          <a href="#" className="hover:text-gray-300">Blog</a>
-          <a href="#" className="hover:text-gray-300">Jobs</a>
-          <a href="#" className="hover:text-gray-300">Press</a>
-          <a href="#" className="hover:text-gray-300">Accessibility</a>
-          <a href="#" className="hover:text-gray-300">Partners</a>
+          <Link  className="hover:text-gray-300">About</Link>
+          <Link href="#" className="hover:text-gray-300">Blog</Link>
+          <Link href="#" className="hover:text-gray-300">Jobs</Link>
+          <Link href="#" className="hover:text-gray-300">Press</Link>
+          <Link href="#" className="hover:text-gray-300">Accessibility</Link>
+          <Link to="/details" className="hover:text-gray-300">Partners</Link>
         </nav>
   
         {/* Social Media Links */}
@@ -32,9 +34,11 @@ function Footer() {
         </div>
   
         {/* Copyright Text */}
-        <p className="text-center text-gray-400 text-sm">
+       <p className="text-center text-gray-400 text-sm m-auto">
+       <Link to ="/copyright">
           © 2024 Your Company, Inc. All rights reserved.
-        </p>
+        </Link>
+       </p>
       </footer>
     );
   }
