@@ -1,9 +1,12 @@
 import { FaInstagram } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { IoLogoTwitter } from "react-icons/io";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { CiLogout } from "react-icons/ci";
+import { CiEdit } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 const gradientStyle = {
   backgroundImage:
@@ -16,6 +19,15 @@ const sidebarGradient = {
 };
 
 const User = () => {
+  const navigate=useNavigate()
+  const logout=()=>{
+    const token=localStorage.getItem("authToken");
+
+      localStorage.removeItem("authToken");
+navigate("/user")
+
+ 
+  }
   const [user, setuserId] = useState(0);
   const [isEditing, setIsEditing] = useState(false);
   const [email, setEmail] = useState("");
@@ -108,12 +120,20 @@ const User = () => {
 
           {/* Edit Profile Button */}
           <button
-            type="button"
-            className="w-full md:w-auto p-3 bg-blue-500 text-white font-bold rounded-lg cursor-pointer hover:bg-blue-700 transition-all"
-            onClick={() => setIsEditing(!isEditing)}
-          >
-            Edit Profile
-          </button>
+  type="button"
+  className="flex items-center gap-2 justify-center w-full md:w-auto p-3 bg-blue-500 text-white font-bold rounded-lg cursor-pointer hover:bg-blue-700 transition-all"
+  onClick={() => setIsEditing(!isEditing)}
+>
+  <CiEdit className="text-lg" /> Edit Profile
+</button>
+
+<button
+  type="button" onClick={(e)=>logout(e)}
+  className="flex items-center gap-2 justify-center w-full md:w-auto p-3 bg-red-500 text-white font-bold rounded-lg cursor-pointer hover:bg-red-700 transition-all " 
+>
+  <CiLogout className="text-lg" /> Logout
+</button>
+
         </div>
       </div>
 

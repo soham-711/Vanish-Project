@@ -15,24 +15,26 @@ import Contactus from "./components/Contact/Contact_us";
 import TrainingHubForStaff from "./components/TrainingHubForStaff/TrainingHubForStaff";
 import AboutUs from "./components/AboutUs/AboutUs";
 import FireTrainingGame from "./components/games/FireTrainingGame";
+import Userprotected from "./components/userprotected/Userprotected";
+
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<DashBoard />} />
+      <Route path="/" element={<Userprotected><DashBoard /></Userprotected>} />
       <Route path="/home" element={<Home />} />
       <Route path="/user-login" element={<UserLogin />} />
       <Route path="/user-signup" element={<UserSignup />} />
-      <Route path="/training-hub" element={<TrainingHub />} />
-      <Route path="/Contactus" element={<Contactus />} />
-      <Route path="/User" element={<User />} />
+      <Route path="/training-hub" element={ <Userprotected><TrainingHub /></Userprotected>} />
+      <Route path="/Contactus" element={<Userprotected><Contactus /></Userprotected>} />
+      <Route path="/user" element={<Userprotected><User /></Userprotected>} />
 
-      <Route path="/aboutus" element={<AboutUs />} />
-      <Route path="/traininghub-for-staff" element={<TrainingHubForStaff />} />
-      <Route path="/copyright" element={<CopyrightPage />}></Route>
-      <Route path="/details" element={<Developers />}></Route>
-      <Route path="/diagram" element={<Diagram />}></Route>
-      <Route path="/admin" element={<Admin />} />
-      <Route path="/game" element={<FireTrainingGame/>} />
+      <Route path="/aboutus" element={<Userprotected><AboutUs /></Userprotected>} />
+      <Route path="/traininghub-for-staff" element={<Userprotected><TrainingHubForStaff /></Userprotected>} />
+      <Route path="/copyright" element={<Userprotected><CopyrightPage /></Userprotected>}></Route>
+      <Route path="/details" element={<Userprotected><Developers /></Userprotected>}></Route>
+      <Route path="/diagram" element={<Userprotected><Diagram /></Userprotected>}></Route>
+      <Route path="/admin" element={<Userprotected><Admin /></Userprotected>} />
+      <Route path="/game" element={<Userprotected><FireTrainingGame/></Userprotected>} />
     </Routes>
   );
 }
