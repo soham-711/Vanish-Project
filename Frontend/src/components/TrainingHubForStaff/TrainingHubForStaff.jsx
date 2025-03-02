@@ -2,24 +2,24 @@ function TrainingHubForStaff() {
   const videos = {
     basic: [
       "/Electrical.mp4",
-      "/Electrical.mp4",
-      "/Electrical.mp4",
+      "/V1.mp4",
+      "/V2.mp4",
       "/Electrical.mp4",
     ],
     advanced: [
-      "/Electrical.mp4",
-      "/Electrical.mp4",
-      "/Electrical.mp4",
+      "/V3.mp4",
+      "/V4.mp4",
+      "/V5.mp4",
       "/Electrical.mp4",
     ],
     organizations: [
-      "/Electrical.mp4",
-      "/Electrical.mp4",
-      "/Electrical.mp4",
+      "/V6.mp4",
+      "/V7.mp4",
+      "/V8.mp4",
       "/Electrical.mp4",
     ],
     vehicles: [
-      "/Electrical.mp4",
+      "/V9.mp4",
       "/Electrical.mp4",
       "/Electrical.mp4",
       "/Electrical.mp4",
