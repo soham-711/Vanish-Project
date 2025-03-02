@@ -26,15 +26,8 @@ function DashBoard() {
             <span className="text-blue-400">{words[index]}</span>
           </h1>
           <p className="mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sit
-            porro doloremque officiis praesentium. Aliquid aspernatur enim
-            numquam perspiciatis id?Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Nemo voluptatum itaque officiis impedit quia quis
-            soluta aliquid hic iste excepturi. Lorem ipsum dolor sit, amet
-            consectetur adipisicing elit. Harum, omnis explicabo esse at id
-            facilis officia rem! Cum, nam dolor! Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Eligendi saepe, quod veniam provident
-            consequuntur obcaecati commodi blanditiis voluptas eos{" "}
+          🔥 AI-Driven Fire Safety Training Interactive, engaging, and role-specific learning.🎬 Live Action & Animation Modules  Realistic simulations for hands-on experience.📊 Personalized Learning Paths  Tailored training based on staff roles.⚡ Instant Feedback & Assessment  Track progress and improve response skills.📅 Flexible & Accessible Training  Learn anytime, anywhere.
+          {" "}
           </p>
 
           <Link
