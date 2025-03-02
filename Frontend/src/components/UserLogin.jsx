@@ -18,35 +18,34 @@ function UserLogin() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const Submit = async (e) => {
-        e.preventDefault();
-        const em = email.current.value;
-        const pa = password.current.value;
-        const newuser = { email: em, password: pa };
-    
-        try {
-          const response = await axios.post("http://localhost:2000/user/login", newuser);
-    
-          if (response.status === 200) {
-            const { token, message } = response.data;
-            toast.success(message || "Login successful!", { position: "top-right" });
-    
-            // Store token
-            localStorage.setItem("authToken", token);
-    
-            setTimeout(() => {
-              navigate("/");
-            }, 2000);
-          }
-        } catch (error) {
-          console.error("Login Error:", error);
-    
-          // Handle different error scenarios
-          const errorMessage =
-            error.response?.data?.message || "Invalid credentials, please try again!";
-          toast.error(errorMessage, { position: "top-right" });
-        }
-      };
-    
+    e.preventDefault();
+    const em = email.current.value;
+    const pa = password.current.value;
+    const newuser = { email: em, password: pa };
+
+    try {
+      const response = await axios.post("http://localhost:2000/user/login", newuser);
+
+      if (response.status === 200) {
+        const { token, message } = response.data;
+        toast.success(message || "Login successful!", { position: "top-right" });
+
+        // Store token
+        localStorage.setItem("authToken", token);
+
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+      }
+    } catch (error) {
+      console.error("Login Error:", error);
+
+      // Handle different error scenarios
+      const errorMessage =
+        error.response?.data?.message || "Invalid credentials, please try again!";
+      toast.error(errorMessage, { position: "top-right" });
+    }
+  };
 
   return (
     <div 
