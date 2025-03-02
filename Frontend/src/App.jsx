@@ -20,8 +20,8 @@ import Userprotected from "./components/userprotected/Userprotected";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Userprotected><DashBoard /></Userprotected>} />
-      <Route path="/home" element={<Home />} />
+      <Route path="/" element={<DashBoard />} />
+      <Route path="/home" element={<Userprotected><Home /></Userprotected>} />
       <Route path="/user-login" element={<UserLogin />} />
       <Route path="/user-signup" element={<UserSignup />} />
       <Route path="/training-hub" element={ <Userprotected><TrainingHub /></Userprotected>} />

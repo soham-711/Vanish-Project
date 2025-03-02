@@ -6,14 +6,22 @@ import { Link } from "react-router-dom";
 function DashBoard() {
   const words = ["Go Vanish", "Clear", "Easy"];
   const [index, setIndex] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % words.length);
     }, 2000);
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
-  });
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -37,12 +45,15 @@ function DashBoard() {
             consequuntur obcaecati commodi blanditiis voluptas eos{" "}
           </p>
 
-          <Link
-            to="/user-signup"
-            className="inline-block mt-4 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition duration-300 shadow-md"
-          >
-            Continue
-          </Link>
+          {/* Hide the button if user is logged in */}
+          {!isLoggedIn && (
+            <Link
+              to="/user-signup"
+              className="inline-block mt-4 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition duration-300 shadow-md"
+            >
+              Continue
+            </Link>
+          )}
         </div>
       </div>
       <Footer />
