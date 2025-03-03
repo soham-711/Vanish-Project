@@ -9,7 +9,7 @@ app.use(cookieParser());
 
 const cors = require('cors');
 app.use(cors({
-    origin: 'http://localhost:5175', // Replace with your frontend's URL
+    origin: 'http://localhost:5173' || 'http://localhost:5174' || 'http://localhost:5175', // Replace with your frontend's URL
     credentials: true, // Allow cookies and authorization headers
 }));
 app.use(express.json());
