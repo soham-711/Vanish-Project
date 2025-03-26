@@ -16,6 +16,8 @@ import TrainingHubForStaff from "./components/TrainingHubForStaff/TrainingHubFor
 import AboutUs from "./components/AboutUs/AboutUs";
 import FireTrainingGame from "./components/games/FireTrainingGame";
 import Userprotected from "./components/userprotected/Userprotected";
+import User_dashboard from "./components/user_dashboard/user_dashboard";
+import MapWithMarkers from "./components/Map/MapWithMarkers";
 
 function App() {
   return (
@@ -35,6 +37,9 @@ function App() {
       <Route path="/diagram" element={<Userprotected><Diagram /></Userprotected>}></Route>
       <Route path="/admin" element={<Userprotected><Admin /></Userprotected>} />
       <Route path="/game" element={<Userprotected><FireTrainingGame/></Userprotected>} />
+      <Route path="/dashboard" element={<Userprotected><User_dashboard/></Userprotected>} />
+      <Route path="/map" element={<Userprotected><MapWithMarkers/></Userprotected>} />
+      
     </Routes>
   );
 }

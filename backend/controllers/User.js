@@ -25,11 +25,24 @@
 // }
 
 // }
+
+
+
+// const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+// const genAI = new GoogleGenerativeAI(process.env.MAP_GEM_API);
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+const genAI = new GoogleGenerativeAI(process.env.MAP_GEM_API);
+
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
 const UserModel = require("../models/User-Register");
 const jwt = require("jsonwebtoken");
 module.exports.getRegister = async (req, res, next) => {
-  const { fullname, email, password } = req.body;
-
+  console.log(req.body)
+  const { fullname, email, password ,location} = req.body;
+ 
   try {
     // Check if the user already exists
     const find_user = await UserModel.findOne({ email });
@@ -47,6 +60,10 @@ module.exports.getRegister = async (req, res, next) => {
       fullname, // Ensure fullname is passed correctly
       email,
       password: hashPassword,
+      location:{
+        city:location.city,
+        pincode:location.pincode
+      }
     });
     console.log(captain);
     // Generate JWT token
@@ -94,5 +111,22 @@ module.exports.getuserdetails = async (req, res) => {
     return res.json({ user: user });
   } catch (error) {
     return res.status(401).json({ error: "invalid or expired token" });
+  }
+};
+
+module.exports.getcordinators = async (req, res) => {
+  try {
+    const token = req.headers.authorization?.split(" ")[1];
+    console.log(token) // Extract token from header
+    if (!token) return res.status(401).json({ message: "Invalid or expired token" });
+
+    const { _id } = jwt.verify(token, process.env.SECRET); // Verify token
+    const user_details = await UserModel.findById(_id);
+    
+    if (!user_details) return res.status(404).json({ message: "User not found" });
+
+    return res.status(200).json({ user: user_details });
+  } catch (error) {
+    return res.status(500).json({ message: "Server error", error });
   }
 };
