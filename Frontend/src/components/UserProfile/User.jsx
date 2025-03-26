@@ -23,10 +23,9 @@ const User = () => {
   const [userId, setUserId] = useState(0);
   const [isEditing, setIsEditing] = useState(false);
   const [email, setEmail] = useState("");
-  const [mobile, setMobile] = useState("72829");
-  const [country, setCountry] = useState("India");
+  
   const [name, setName] = useState("");
-  const [gender, setGender] = useState("Male");
+  
 
   const array = [
     "th.jpg",
@@ -61,7 +60,7 @@ const User = () => {
         }
       } catch (error) {
         console.error("Error fetching user data:", error);
-        navigate("/");
+        
       }
     };
 
@@ -131,15 +130,15 @@ const User = () => {
           </div>
           <div>
             <h1 className="font-semibold text-lg text-gray-900">Mobile No:</h1>
-            <p className="text-sm md:text-base text-gray-700">{mobile}</p>
+            <p className="text-sm md:text-base text-gray-700">{629722610}</p>
           </div>
           <div>
             <h1 className="font-semibold text-lg text-gray-900">Country:</h1>
-            <p className="text-sm md:text-base text-gray-700">{country}</p>
+            <p className="text-sm md:text-base text-gray-700">India</p>
           </div>
           <div>
             <h1 className="font-semibold text-lg text-gray-900">Gender:</h1>
-            <p className="text-sm md:text-base text-gray-700">{gender}</p>
+            <p className="text-sm md:text-base text-gray-700">Male</p>
           </div>
 
           <button

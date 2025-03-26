@@ -1,7 +1,9 @@
-
+import Navber from "../Navber"
 const Contact_us = () => (
+  
   <div className="w-full flex flex-col md:flex-row">
     {/* Left Part - Contact Form with Background Image */}
+    <Navber/>
     <div
       className="w-full md:w-1/2 min-h-screen flex justify-center items-center bg-cover bg-center bg-no-repeat p-5"
       style={{

@@ -1,3 +1,5 @@
+import { Link, useNavigate } from "react-router-dom";
+
 function TrainingHubForStaff() {
   const videos = {
     basic: [
@@ -25,6 +27,7 @@ function TrainingHubForStaff() {
       "/Electrical.mp4",
     ],
   };
+  const navigate = useNavigate()
 
   return (
     <div className="bg-gradient-to-b from-[#660000] via-[#CC5500] to-[#FFD700] min-h-screen">
@@ -40,12 +43,12 @@ function TrainingHubForStaff() {
           </span>
         </div>
         <div className="flex gap-8">
-          <a href="#" className="hover:text-yellow-300 transition duration-300">
+          <Link to="/home" className="hover:text-yellow-300 transition duration-300">
             Home
-          </a>
-          <a href="#" className="hover:text-yellow-300 transition duration-300">
+          </Link>
+          <Link to="/aboutus" className="hover:text-yellow-300 transition duration-300">
             About Us
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -174,8 +177,8 @@ function TrainingHubForStaff() {
         <p className="mt-2 text-sm">
           Learn essential fire safety skills for your workplace and home.
         </p>
-        <button className="mt-4 px-6 py-2 bg-yellow-400 text-[#8B0000] font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition">
-          Get Started
+        <button onClick={()=>navigate("/contactus")} className="mt-4 px-6 py-2 bg-yellow-400 text-[#8B0000] font-semibold rounded-lg shadow-md hover:bg-yellow-300 transition">
+           Get Started
         </button>
       </div>
     </div>
