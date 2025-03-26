@@ -135,7 +135,7 @@ function AboutUs() {
         <div className="w-full flex flex-col items-center bg-black bg-opacity-70 px-6 py-12">
           <h2 className="text-3xl font-bold text-[#ffcc00]">Stay Safe with Vanish</h2>
           <p className="mt-2 text-gray-300">Want to learn more about fire safety? Contact us today.</p>
-          <a href="#contact" className="mt-4 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+          <a href="/contactus" className="mt-4 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
             Contact Us
           </a>
         </div>

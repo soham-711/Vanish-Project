@@ -16,8 +16,12 @@ import TrainingHubForStaff from "./components/TrainingHubForStaff/TrainingHubFor
 import AboutUs from "./components/AboutUs/AboutUs";
 import FireTrainingGame from "./components/games/FireTrainingGame";
 import Userprotected from "./components/userprotected/Userprotected";
+
 import FireSafetyChatbot from "./components/FireSafetyChatbot/FireSafetyChatbot";
 import FireSafetyVoiceAlert from "./components/FireSafetyVoiceAss/FireSafetyVoiceAlert";
+
+
+import MapWithMarkers from "./components/Map/MapWithMarkers";
 
 
 function App() {
@@ -38,8 +42,12 @@ function App() {
       <Route path="/diagram" element={<Userprotected><Diagram /></Userprotected>}></Route>
       <Route path="/admin" element={<Userprotected><Admin /></Userprotected>} />
       <Route path="/game" element={<Userprotected><FireTrainingGame/></Userprotected>} />
+
       <Route path="/fire-bot" element={<FireSafetyChatbot></FireSafetyChatbot>}/>
       <Route path="/ai-moc" element={<FireSafetyVoiceAlert></FireSafetyVoiceAlert>}/>
+
+      
+      <Route path="/map" element={<Userprotected><MapWithMarkers/></Userprotected>} />
       
     </Routes>
   );

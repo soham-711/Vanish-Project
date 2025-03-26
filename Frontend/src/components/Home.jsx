@@ -16,7 +16,7 @@ function Home() {
               { img: "training-hub.jpg", route: "/training-hub" },
               { img: "ai-moc.jpg", route: "/ai-moc" },
               { img: "Fire-bot.jpg", route: "/fire-bot" },
-              { img: "Fire-bot.jpg", route: "/near-by-firestation" },
+              { img: "Fire-bot.jpg", route: "/map" },
             ].map((item, index) => (
               <div
                 key={index}
