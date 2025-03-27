@@ -13,7 +13,7 @@ const cookieParser = require("cookie-parser");
 ConnectDb();
 
 const app = express();
-const PORT = 2000; // Match with frontend request
+const PORT = process.env.PORT || 2000; // Match with frontend request
 
 // ✅ Middleware
 app.use(cors({
