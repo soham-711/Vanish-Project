@@ -51,7 +51,7 @@ const MapWithMarkers = () => {
   
     const fetchUserLocation = async () => {
       try {
-        const response = await axios.get("http://localhost:2000/user/location", {
+        const response = await axios.get("https://vanish-project.onrender.com/user/location", {
           headers: { Authorization: `Bearer ${token}` },
         });
        

@@ -30,7 +30,7 @@ function FireSafetyChatbot() {
     setIsTyping(true); // Show typing indicator
 
     try {
-      const response = await axios.post("http://localhost:2000/chat", { message: input });
+      const response = await axios.post("https://vanish-project.onrender.com/chat", { message: input });
       console.log(response);
       console.log( response.data.reply.parts[0].text);
       

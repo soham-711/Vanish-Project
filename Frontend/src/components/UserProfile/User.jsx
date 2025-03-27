@@ -39,7 +39,7 @@ const User = () => {
       }
 
       try {
-        const response = await axios.get("http://localhost:2000/user/getuser", {
+        const response = await axios.get("https://vanish-project.onrender.com/user/getuser", {
           headers: { authorization: `Bearer ${token}` },
           withCredentials: true,
         });

@@ -141,7 +141,7 @@ function FireSafetyVoiceAlert() {
     const fetchSensorData = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get("http://localhost:2000/sensor-data/SensorData");
+        const response = await axios.get("https://vanish-project.onrender.com/sensor-data/SensorData");
         const newSensorData = {
           time: new Date().toLocaleTimeString(),
           gas: response.data.gas,

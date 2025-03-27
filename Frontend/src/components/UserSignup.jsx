@@ -40,7 +40,7 @@ function UserSignup() {
   console.log(newuser)
     try {
       const response = await axios.post(
-        `http://localhost:2000/user/register`,
+        `https://vanish-project.onrender.com/user/register`,
         newuser
       );
   console.log(response)

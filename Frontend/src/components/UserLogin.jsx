@@ -24,7 +24,7 @@ function UserLogin() {
 
     try {
       const response = await axios.post(
-        "http://localhost:2000/user/login",
+        "https://vanish-project.onrender.com/user/login",
         newuser
       );
 
