@@ -11,7 +11,7 @@ const TrainingHub = () => {
         className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 py-12"
         style={{
           backgroundImage:
-            "url('/Traininghub')",
+            "url('/Traininghub.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
