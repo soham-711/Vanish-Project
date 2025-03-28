@@ -13,7 +13,7 @@ import Admin from "./components/Admin_Panel/Admin";
 
 import Contactus from "./components/Contact/Contact_us";
 import TrainingHubForStaff from "./components/TrainingHubForStaff/TrainingHubForStaff";
-import AboutUs from "./components/aboutUs/AboutUs";
+import AboutUs from "./components/aboutus/AboutUs";
 import FireTrainingGame from "./components/games/FireTrainingGame";
 import Userprotected from "./components/userprotected/Userprotected";
 
