@@ -11,7 +11,7 @@ const TrainingHub = () => {
         className="relative w-full min-h-screen flex flex-col justify-center items-center px-6 py-12"
         style={{
           backgroundImage:
-            "url('https://img.freepik.com/free-photo/fire-flame-black-background_53876-111363.jpg?t=st=1740280368~exp=1740283968~hmac=f5965b7c7ce6948465236199b47f102f3d2887b2c33c7bc1cec02dea7145b2a0&w=1380')",
+            "url('/Traininghub')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
