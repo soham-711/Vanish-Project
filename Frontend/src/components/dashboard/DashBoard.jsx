@@ -26,7 +26,7 @@ function DashBoard() {
   return (
     <>
       <Navbar />
-      <div className="bg-[url('Dashboard.jpg')] bg-cover bg-center h-screen w-full flex justify-center items-center">
+      <div className="bg-[url('/Dashboard.jpg')] bg-cover bg-center h-screen w-full flex justify-center items-center">
         {/* content div */}
         <div className="text-white text-center m-auto xl:w-[40%] w-[90%] border rounded-xl py-8 px-3">
           <h1 className="text-4xl font-bold">
