@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 2000; // Match with frontend request
 
 // ✅ Middleware
 app.use(cors({
-    origin: ["https://vanish-project.onrender.com"], // Allowed Frontend URLs
+    origin: ["https://vanish-ytwu.onrender.com"], // Allowed Frontend URLs
     credentials: true,
 }));
 app.use(express.json());
