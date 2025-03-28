@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 2000; // Match with frontend request
 
 // ✅ Middleware
 app.use(cors({
-    origin: ["http://localhost:5173", "http://localhost:5174", "http://localhost:5175"], // Allowed Frontend URLs
+    origin: ["https://vanish-project.onrender.com"], // Allowed Frontend URLs
     credentials: true,
 }));
 app.use(express.json());
@@ -64,7 +64,7 @@ app.use("/sensor-data", sensorRoutes); // Ensure `sensorRoutes` properly handles
 
 // ✅ Test Route
 app.get("/", (req, res) => {
-    res.status(200).send("🔥 Fire Safety Chatbot API is Running!");
+    res.status(200).send("🔥 Fire Safety Vanish is Running!");
 });
 
 // ✅ Start Server
