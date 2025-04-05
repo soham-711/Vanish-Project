@@ -12,11 +12,11 @@ function Home() {
           {/* Sidebar - Responsive */}
           <div className="w-full md:w-1/4 p-4 md:p-6 rounded-lg shadow-md bg-[#3D3D3D] text-white space-y-6 md:space-y-8 overflow-x-auto md:overflow-visible flex md:flex-col gap-4 md:gap-0">
             {[
-              { img: "home-vanish.jpg", route: "/home" },
+              { img: "home.jpg", route: "/home" },
               { img: "training-hub.jpg", route: "/training-hub" },
               { img: "ai-moc.jpg", route: "/ai-moc" },
               { img: "Fire-bot.jpg", route: "/fire-bot" },
-              { img: "Fire-bot.jpg", route: "/map" },
+              { img: "Firestation.jpg", route: "/map" },
             ].map((item, index) => (
               <div
                 key={index}
