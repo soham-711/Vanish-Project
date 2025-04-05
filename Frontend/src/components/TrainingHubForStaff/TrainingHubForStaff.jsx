@@ -6,25 +6,25 @@ function TrainingHubForStaff() {
       "/Electrical.mp4",
       "/V1.mp4",
       "/V2.mp4",
-      "/Electrical.mp4",
+      "/V3.mp4",
     ],
     advanced: [
-      "/V3.mp4",
       "/V4.mp4",
       "/V5.mp4",
-      "/Electrical.mp4",
-    ],
-    organizations: [
       "/V6.mp4",
       "/V7.mp4",
+    ],
+    organizations: [
       "/V8.mp4",
-      "/Electrical.mp4",
+      "/V9.mp4",
+      "/V10.mp4",
+      "/V11.mp4",
     ],
     vehicles: [
-      "/V9.mp4",
-      "/Electrical.mp4",
-      "/Electrical.mp4",
-      "/Electrical.mp4",
+      "/V12.mp4",
+      "/V13.mp4",
+      "/V14.mp4",
+      "/V16.mp4",
     ],
   };
   const navigate = useNavigate()
